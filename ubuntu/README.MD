@@ -11,6 +11,7 @@ docker-compose up -d
 Run an Ubuntu container interactively:
 ```sh
 docker run -it ubuntu
+```
 
 To access the running container, use the following command:
 ```sh
@@ -20,4 +21,18 @@ Replace `<container_id>` with the actual ID of your running container, which you
 ```sh
 docker ps
 ```
+
+Alternatively, you can skip this step and build the Dockerfile with the following syntax:
+```sh
+docker build -t <image_name> .
+```
+
+Example:
+```sh
+docker build -t doge_ubuntu .
+```
+
+Then run the image:
+```sh
+docker run <image_name>
 ```
